@@ -1,0 +1,248 @@
+1. Intro
+A language is categorised based on its level of abstraction; The level at which one needs to have the knowledge 
+about machine processor architecture before writting a for program for such machine. And this is refers to as 
+program portability; a single program working on diff machine.
+
+-> High and low level languages
+a. Low level language
+* Machine language (or code)
+ It is closer to hardware as it's consist of binaries and as a result, execution time is faster.
+ It is dependent on the computer architecture (i.e. the execution varies depending on the cpu config).
+ Therefore, new code is written for different machine.
+ 
+* Assembly language
+ Assembly language uses a mnemonic to represent each low-level machine instruction 
+ or opcode (operator such as +, 0, -, etc.)
+ Each line has one to one correspondent with the machine code.
+ An assembler program creates object code by translating combinations of mnemonics 
+ and syntax for operations into their numerical equivalents therefore, making it slower. This representation
+ typically includes an operation code ("opcode") as well as other control bits and data.
+ Like the machine code, the program is also dependent of machine design.
+
+b. High level languages
+ They are not machine processor dependent but some are OS dependent.
+ The aim of the languages is usability and not efficiency (execution speed), and as a result, they are easy to
+ maintain.
+ 
+
+2. Language translators
+a. Low level language
+i. Assembler - It is used to converts assembly language program to machine code (object file)
+
+b. High level language
+i. Compiler - It converts the whole source code or program into an executable program (or object file)
+ii Interpreter - It converts each line or a statement into machine code and gives output of the statement one after the other. In this case, an xcutable file is NOT created separately.
+
+3. Structure of C Program
+
+- Documentation section (Optional)
+This includes comments about the program such as the author, date, and description of the program.
+
+- Link Section (Essential)
+This includes the C programming library such as header file e.g stdio.h, conio.h (console I/O), math.h, etc.
+
+- Definition section
+This section is where we define all the symbolic const or macros with the use of "#define" pre-processor directive (NB: Anything that starts with '#' is called pre-processor directive and does not ends with ";"). For example,
+
+#define PI 3.14159                (object like macro)
+
+- Global decalration section
+This is where we declare global variables and all the user defined functions. It is done outside of the main function e.g.
+
+int a;
+void print_alpha(int n);
+
+- main section
+- Sub program section
+This is where we write user defined functions after main function.
+
+4. Compilation process in C programming
+
+- Preprocessor: It removes comments, imports all the codes in the header files that included in the source code, and expands all the macros by replacing them with their values wherever they are used within the code. In this case, an intermediate file of ".i" is generated (which can also be saved without any xtension name).
+
+- Compiler (-S): It converts the preprocessor or source code to assembly code and generate ".asm" or ".s" file
+
+- Assembler: It converts assembly code file to object (machine) code which is ".obj"
+
+NB: Compilation (-c): generates obj code from source, pre..., or assembly code 
+
+- Linker: Check notepad for more...
+- Loader
+
+5.Constants and their types in C language
+Constants in C Language are used to define values that cannot be changed at runtime. The keyword is used for variable declaration as a constant, once a variable is declared as a constant, its value cannot be changed.
+
+There are two ways of defining constants in C programming. That is, either by using the "#define" Preprocessor directive or the "const" keyword. For example,
+
+*#define const_name value
+*const data_type const_name = value; 
+
+a. Numeric constants
+i.Integer
+-Decimal - This is the default of integer constant and is in base 10 ranging from 0-9 e.g. 34, 5, 100 
+
+-Octal - These are in base 8 ranging from 0-7 and octal const. are preceded by 0 e.g. 034, 05, 010, etc.
+
+-Hexadecimal - These are in base 16 ranging from 0-9 and A-F, and they are preceeded with "0x" or "0X" e.g. 0x34, 0X79, 0xFA5, etc.
+
+ii Floating/real constants
+-Decimal format: 3.14, 0.123, 1000.
+-Exponential form: 3.14e2 (equal to 314), 1.23e-3 (equal to 0.00123)
+
+b. Character cconstants
+i. Single character const.
+ii. String const.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
