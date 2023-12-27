@@ -74,8 +74,10 @@ Constants in C Language are used to define values that cannot be changed at runt
 
 There are two ways of defining constants in C programming. That is, either by using the "#define" Preprocessor directive or the "const" keyword. For example,
 
-*#define const_name value
-*const data_type const_name = value; 
+*#define const_name value  (This is usually defined above the main function and the macro or var_name should be in 
+uppercase)
+
+*const data_type const_name = value; (This is often declared within the main function) 
 
 a. Numeric constants
 i.Integer
@@ -90,8 +92,32 @@ ii Floating/real constants
 -Exponential form: 3.14e2 (equal to 314), 1.23e-3 (equal to 0.00123)
 
 b. Character cconstants
-i. Single character const.
-ii. String const.
+i. Single character const. - These are being stored in form of ASCII charcters and they are enclosed in a single quote e.g. 's', '/n', 'B', etc.
+
+ii. String const. - This is a sequence of characters that are enclosed in double quote. A string is often ended or terminated with null char. ("\o") and considered part of the string (i.e string length increases with 1 char.).
+
+6. Variables
+C language has 32 keywords and must not be use as variable name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
 
