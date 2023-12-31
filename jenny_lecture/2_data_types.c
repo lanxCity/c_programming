@@ -1,9 +1,10 @@
 /* Data type */
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void)
 {
-	short int a, b;
+	short a, b;
 
 	/*==> 1. Integer Data types*/
 	printf("=======> Integer <======\n");
@@ -22,15 +23,22 @@ int main(void)
 	printf("--> unsigned short: %hu\n", 8888888);
 	printf("--> %d\n", 8888888);
 	
+	system("clear");
+
 	a = 32768;
 	b = -10;
 	printf("The value of a (short max = 32767): %d\n", b);
 	printf("The value of a (unsigned max = 65535): %hu\n", b);
 
 
+	system("clear");
 	/*==> 2. Character*/
 	printf("=========> Character <========\n");
+	
+	char c = 130;
+
 	printf("%c\n", 33);
+	printf("character (130): %hu\n", c);
 
 	/**
 	 * For extended ASCII char, it advisable to use their unicode code points for portability purposes

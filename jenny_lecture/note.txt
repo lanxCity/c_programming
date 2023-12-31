@@ -111,6 +111,9 @@ a. Integer
 * short and long
 * signed and unsigned
 
+b. Character (ASCII characters)
+* signe char: -128 to 127
+* unsigned char - 0 to 255
 
 - Derived data: These derived from the primary data types and it includes
 array, pointer, structure, union
@@ -134,9 +137,27 @@ b. Float Point Number
 * long double - 10bytes (%Lf)
 
 
+8. C-Operators
+This is used to perform operations on different data.
 
+----> Part 1 (Based on operands)
+- Unary - !(not), &(address of), ++, --, sizeof
+- Binary - arithmetic (e.g. +, -), relational (e.g. <, >, ==, !=), logical(&&, ||), Bitwise, and assignment operators.
+-Ternary - It is used in a place of conditional statment(inline condition) and it is rep as, "?:". For example,
 
+x = a > b ? 1 : 0; 
 
+****(x is equal to "1" if a > b else, x is equal to "0")  
+-----> Part 2 (Based on operations)
+- Arithmetic operator (for numerical operations), Assignment, Bitwise, Relational, etc.
+
+NB: 
+* For Modulo operator (%), the sign of the first operand determines the sign of the remainder. 
+* It can only be used with integers.
+
+* Associtivity is right to left (In a case where precedence doesn't works); BODMAS
+
+------>
 
 
 
