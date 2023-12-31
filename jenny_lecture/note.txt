@@ -96,14 +96,42 @@ i. Single character const. - These are being stored in form of ASCII charcters a
 
 ii. String const. - This is a sequence of characters that are enclosed in double quote. A string is often ended or terminated with null char. ("\o") and considered part of the string (i.e string length increases with 1 char.).
 
-6. Variables
-C language has 32 keywords and must not be use as variable name
+6. Variables, Keywords & Idetifiers
+- Keywords are reserved words that are predefined in C-language and have a special meanings in the language.
+* IN ANSI-C, there are 32 keywords in C-language and can not be used as variable names. This includes: if, continue, int, float, char, default, etc.
+
+- Identifiers are user defined words such as variable name, name of a function, array, or struct.
+* According to ANSI, Length of an identifier should not be more than 31 characters.
+
+7. Data types
+- Primary data: These are the fundamental data types and it includes 
+int, float, double, char, void
+
+a. Integer
+* short and long
+* signed and unsigned
 
 
+- Derived data: These derived from the primary data types and it includes
+array, pointer, structure, union
+
+- User-defined data (UDT): 
+enumerated DT, typedef.
+
+====> NB: (Learn Numerical Analysis) 
+1byte == 8bits
+1024bytes == 1kb 
+And so on...
+
+Therefore, if a system is 2GB RAM and a data is of 1byte (8bits), then it can store;
+
+2 * 1024(MB)" == 2 * 1024 * 1024 * 1024 (bytes) == 2 * 1024 * 1024 * 1024 * 8(bits)
 
 
-
-
+b. Float Point Number
+* float - 4bytes (%f)
+* double - 8bytes (%lf)
+* long double - 10bytes (%Lf)
 
 
 
