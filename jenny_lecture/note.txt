@@ -155,9 +155,11 @@ NB:
 * For Modulo operator (%), the sign of the first operand determines the sign of the remainder. 
 * It can only be used with integers.
 
-* Associtivity is right to left (In a case where precedence doesn't works); BODMAS
+* Associtivity (for both Arithmetic and Relational) is right to left (In a case where precedence doesn't works);
 
------->
+* Arithmetic operators have high precedence to relationals'
+* %, *, / have same precedece but higher than "+, -"
+* >, <, >=, <= have same precedence and higher than "==, !="
 
 
 

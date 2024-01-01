@@ -8,9 +8,9 @@
 int main(void)
 {
 
-	int x, y, z;
+	int a, b, c, d, e, f;
 
-	/*-----> increament and decreament*/
+	/*-----> increament and decreament*
 
 	printf("---->Increament and Decreament");
 
@@ -24,7 +24,7 @@ int main(void)
 	y = ++x;
 	printf("++x: %d, y: %d\n", x, y);
 
-	/*------> modulo and assignment operators*/
+	/*------> modulo and assignment operators*
 	putchar('\n');
 	printf("------>Modulo operator\n");
 
@@ -32,14 +32,14 @@ int main(void)
 	y = 7;
 	printf("%d %% %d: %d\n", x, y, x % y);
 
-	x = -x;		/*x = -15 and y = 7*/
+	x = -x;		/*x = -15 and y = 7*
 	printf("%d %% %d: %d\n", x, y, x % y);
 
-	x = -x;		/*x = 15 and y = -7*/
+	x = -x;		/*x = 15 and y = -7*
 	y = -y;
 	printf("%d %% %d: %d\n", x, y, x % y);
 
-	x = -x;		/*x = -15 and y = -7*/
+	x = -x;		/*x = -15 and y = -7*
 	printf("%d %% %d: %d\n", x, y, x % y);
 
 
@@ -48,7 +48,7 @@ int main(void)
 	printf("%d\n", 6 + 5 - 2 * 4);
 
 
-	/*----> Increament and decreament operators*/
+	/*----> Increament and decreament operators*
 
 	//z = 10;
 	//printf("z: %d\n", ++z == 10 ? z : 0);
@@ -57,7 +57,15 @@ int main(void)
 
 	x = 8, y = 7;
 	printf("%d < %d: %d\n", x, y, x < y);
+	*/
 
+	/*------> Relational operators*/
+
+	a = 18, b = 10;
+	c = 9, d = 10;
+	e = 10, f = 1;
+
+	printf("The relation is: %d\n", a + c == b >= e < c + d != 1);
 
 
 
