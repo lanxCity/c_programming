@@ -67,8 +67,11 @@ int main(void)
 
 	printf("The relation is: %d\n", a + c == b >= e < c + d != 1);
 
+	/*-------> Bitwise Operator*/
 
-
+	printf("Bitwise AND (&): %d & %d -> %d\n", b, c, b & c);
+	printf("Bitwise OR (|): %d | %d -> %d\n", b, c, b | c);
+	printf("Bitwise AND (^): %d & %d -> %d\n", b, c, b ^ c);
 
 
 
