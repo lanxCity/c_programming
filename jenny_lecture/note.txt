@@ -1,0 +1,366 @@
+1. Intro
+A language is categorised based on its level of abstraction; The level at which one needs to have the knowledge 
+about machine processor architecture before writting a for program for such machine. And this is refers to as 
+program portability; a single program working on diff machine.
+
+-> High and low level languages
+a. Low level language
+* Machine language (or code)
+ It is closer to hardware as it's consist of binaries and as a result, execution time is faster.
+ It is dependent on the computer architecture (i.e. the execution varies depending on the cpu config).
+ Therefore, new code is written for different machine.
+ 
+* Assembly language
+ Assembly language uses a mnemonic to represent each low-level machine instruction 
+ or opcode (operator such as +, 0, -, etc.)
+ Each line has one to one correspondent with the machine code.
+ An assembler program creates object code by translating combinations of mnemonics 
+ and syntax for operations into their numerical equivalents therefore, making it slower. This representation
+ typically includes an operation code ("opcode") as well as other control bits and data.
+ Like the machine code, the program is also dependent of machine design.
+
+b. High level languages
+ They are not machine processor dependent but some are OS dependent.
+ The aim of the languages is usability and not efficiency (execution speed), and as a result, they are easy to
+ maintain.
+ 
+
+2. Language translators
+a. Low level language
+i. Assembler - It is used to converts assembly language program to machine code (object file)
+
+b. High level language
+i. Compiler - It converts the whole source code or program into an executable program (or object file)
+ii Interpreter - It converts each line or a statement into machine code and gives output of the statement one after the other. In this case, an xcutable file is NOT created separately.
+
+3. Structure of C Program
+
+- Documentation section (Optional)
+This includes comments about the program such as the author, date, and description of the program.
+
+- Link Section (Essential)
+This includes the C programming library such as header file e.g stdio.h, conio.h (console I/O), math.h, etc.
+
+- Definition section
+This section is where we define all the symbolic const or macros with the use of "#define" pre-processor directive (NB: Anything that starts with '#' is called pre-processor directive and does not ends with ";"). For example,
+
+#define PI 3.14159                (object like macro)
+
+- Global decalration section
+This is where we declare global variables and all the user defined functions. It is done outside of the main function e.g.
+
+int a;
+void print_alpha(int n);
+
+- main section
+- Sub program section
+This is where we write user defined functions after main function.
+
+4. Compilation process in C programming
+
+- Preprocessor: It removes comments, imports all the codes in the header files that included in the source code, and expands all the macros by replacing them with their values wherever they are used within the code. In this case, an intermediate file of ".i" is generated (which can also be saved without any xtension name).
+
+- Compiler (-S): It converts the preprocessor or source code to assembly code and generate ".asm" or ".s" file
+
+- Assembler: It converts assembly code file to object (machine) code which is ".obj"
+
+NB: Compilation (-c): generates obj code from source, pre..., or assembly code 
+
+- Linker: Check notepad for more...
+- Loader
+
+5.Constants and their types in C language
+Constants in C Language are used to define values that cannot be changed at runtime. The keyword is used for variable declaration as a constant, once a variable is declared as a constant, its value cannot be changed.
+
+There are two ways of defining constants in C programming. That is, either by using the "#define" Preprocessor directive or the "const" keyword. For example,
+
+*#define const_name value  (This is usually defined above the main function and the macro or var_name should be in 
+uppercase)
+
+*const data_type const_name = value; (This is often declared within the main function) 
+
+a. Numeric constants
+i.Integer
+-Decimal - This is the default of integer constant and is in base 10 ranging from 0-9 e.g. 34, 5, 100 
+
+-Octal - These are in base 8 ranging from 0-7 and octal const. are preceded by 0 e.g. 034, 05, 010, etc.
+
+-Hexadecimal - These are in base 16 ranging from 0-9 and A-F, and they are preceeded with "0x" or "0X" e.g. 0x34, 0X79, 0xFA5, etc.
+
+ii Floating/real constants
+-Decimal format: 3.14, 0.123, 1000.
+-Exponential form: 3.14e2 (equal to 314), 1.23e-3 (equal to 0.00123)
+
+b. Character cconstants
+i. Single character const. - These are being stored in form of ASCII charcters and they are enclosed in a single quote e.g. 's', '/n', 'B', etc.
+
+ii. String const. - This is a sequence of characters that are enclosed in double quote. A string is often ended or terminated with null char. ("\o") and considered part of the string (i.e string length increases with 1 char.).
+
+6. Variables, Keywords & Idetifiers
+- Keywords are reserved words that are predefined in C-language and have a special meanings in the language.
+* IN ANSI-C, there are 32 keywords in C-language and can not be used as variable names. This includes: if, continue, int, float, char, default, etc.
+
+- Identifiers are user defined words such as variable name, name of a function, array, or struct.
+* According to ANSI, Length of an identifier should not be more than 31 characters.
+
+7. Data types
+- Primary data: These are the fundamental data types and it includes 
+int, float, double, char, void
+
+a. Integer
+* short and long
+* signed and unsigned
+
+b. Character (ASCII characters)
+* signe char: -128 to 127
+* unsigned char - 0 to 255
+
+- Derived data: These derived from the primary data types and it includes
+array, pointer, structure, union
+
+- User-defined data (UDT): 
+enumerated DT, typedef.
+
+====> NB: (Learn Numerical Analysis) 
+1byte == 8bits
+1024bytes == 1kb 
+And so on...
+
+Therefore, if a system is 2GB RAM and a data is of 1byte (8bits), then it can store;
+
+2 * 1024(MB)" == 2 * 1024 * 1024 * 1024 (bytes) == 2 * 1024 * 1024 * 1024 * 8(bits)
+
+
+b. Float Point Number
+* float - 4bytes (%f)
+* double - 8bytes (%lf)
+* long double - 10bytes (%Lf)
+
+
+8. C-Operators
+This is used to perform operations on different data.
+
+----> Part 1 (Based on operands)
+- Unary - !(not), &(address of), ++, --, sizeof
+- Binary - arithmetic (e.g. +, -), relational (e.g. <, >, ==, !=), logical(&&, ||), Bitwise, and assignment operators.
+-Ternary - It is used in a place of conditional statment(inline condition) and it is rep as, "?:". For example,
+
+x = a > b ? 1 : 0; 
+
+****(x is equal to "1" if a > b else, x is equal to "0")  
+-----> Part 2 (Based on operations)
+- Arithmetic operator (for numerical operations), Assignment, Bitwise, Relational, etc.
+
+NB: 
+* For Modulo operator (%), the sign of the first operand determines the sign of the remainder. 
+* It can only be used with integers.
+
+* Associtivity (for both Arithmetic and Relational) is right to left (In a case where precedence doesn't works);
+
+* Arithmetic operators have high precedence to relationals'
+* %, *, / have same precedece but higher than "+, -"
+* >, <, >=, <= have same precedence and higher than "==, !="
+
+- Bitwise operator
+In the arithmetic-logic unit (which is within the CPU), mathematical operations like: addition, subtraction, multiplication and division are done in bit-level. To perform bit-level operations in C programming, bitwise operators are used.
+* & (AND), |(OR), ^ (XOR or Xclusive OR), ~ (Bitwise not or compliment), << (Left shift), >> (Right shift)
+
+NB: 
+* The Bitwise is only used with the positive integers
+* The output or result given is integer (unlike logical operator which returns either 0 or 1)
+* The XOR operator works in opposite way. For example,
+
+3 & 9 -> 0011 & 1001 = 0001 ~= 1 (integer)
+3 | 9 -> 0011 & 1001 = 1011 ~= 11 (integer)
+3 ^ 9 -> 0011 & 1001 = 1011 ~= 11 (integer) (if both sides are the same, then it is "0", else it is "1")
+
+* Left shift operator shifts all bits towards left by a certain number of specified bits. The bit positions that have been vacated by the left shift operator are filled with 0. For any integer, the binary format started from 8bits upward E.g.
+
+212 = 11010100 (In binary)
+212<<1 = 110101000 (In binary) [Left shift by one bit]
+212<<0 = 11010100 (Shift by 0)
+212<<4 = 110101000000 (In binary) =3392(In decimal)
+
+* operator shifts all bits towards right by certain number of specified bits.
+
+212 = 11010100 (In binary)
+212 >> 2 = 00110101 (In binary) [Right shift by two bits] = 53 (In decimal)
+
+212 >> 7 = 00000001 (In binary)
+
+* Bitwise complement operator is a unary operator (works on only one operand). It changes 1 to 0 and 0 to 1. E.gg. 
+35 = 00100011 (In Binary)
+
+Bitwise complement Operation of 35
+~ 00100011 
+  ________
+  11011100  = 220 (In decimal)
+
+However, in real sense, do not worry about the inversion but note that 
+
+"~value = -(value + 1)" e.g.  ~6 = -(110 + 1) == -(111) == -7.
+
+* But to get the negative of a value, 2's compliment is used (8 or more bits).
+* And the 2's compliment is especially useful to get the negative of a value (by noting that the first bit is a sign)
+
+- Miscellaneous operators
+", (comma operator has the least precedence)" -> 
+This can be use as a separator (when declaring variable or param, or passed as function argument), it can also be used as an operator e.g. int a = (2, 4); NB: The first operand is evaluated and then rejected followed by the second operand which is going to be returned.
+
+
+"sizeof"
+"* and & (pointer operators)"
+". and -> (member selection operator)"
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
