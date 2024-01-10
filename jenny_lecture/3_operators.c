@@ -80,11 +80,16 @@ int main(void)
 	/*------> Special characters*/
 	printf("------------------> The comma operator\n");
 	
-	a = (printf("I am inside comma operator\n"), 35, 90);
-	b = 67, 12, 3, 43;
+	a = (printf("I am inside comma operator\n"), 35, 90);     //The last arg would be returned and assign to a
+	b = ++a, a++;     //The first value is aasigned to b
 
 	printf("The value of a: %d\n", a);
 	printf("The value of b: %d\n", b);
+
+	a = 0, b = 1, c = -1;
+
+	printf("--(%d) * (5 + (%d))/2 - %d++ * b: %d\n", a, b, c, --a * (5 + b)/2 - c++ * b);
+
 
 
 
