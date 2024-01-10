@@ -205,7 +205,8 @@ However, in real sense, do not worry about the inversion but note that
 
 - Miscellaneous operators
 ", (comma operator has the least precedence)" -> 
-This can be use as a separator (when declaring variable or param, or passed as function argument), it can also be used as an operator e.g. int a = (2, 4); NB: The first operand is evaluated and then rejected followed by the second operand which is going to be returned.
+This can be use as a separator (when declaring variable or param, or passed as function argument), it can also be used as an operator e.g. int a = (2, 4); 
+NB: The first operands are only evaluated and then rejected whereby the last operand is evaluated and returned.
 
 
 "sizeof"
