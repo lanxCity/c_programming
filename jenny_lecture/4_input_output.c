@@ -8,7 +8,7 @@ int main()
 {
 	int a, b, sum;
 	float c, d, num;
-	char e, f, user[15];
+	char e, f, user[5];
 
 	/*---------> 1. Formatted input "scanf()"
 	 * -> scanf("control or conversion string", arg1, arg2, arg3)
@@ -24,6 +24,12 @@ int main()
 	 * - to the variables
 	 * - We can also specify the size or number of digit to be entered.
 	 * - scanf function always returns the num of args
+	 *
+	 * - The fgets() function is used to read data from the file but we if specify "stdin", we are going 
+	 * - to read data from the stdin (shell).
+	 *
+	 *
+	 *
 	 *
 	 * */
 	//printf("---------> 1. Formatted input \"scanf()\" function\n\n");
@@ -43,10 +49,10 @@ int main()
 	/*---------> 2. Formatted output "printf()"
 	 * -> Printf()
 	 * - Unlike scanf, we only need the variable as an arg to print the value stored
-	 *
+	 * - Returns the number (length) of a string printed
 	 *
 	 * /
-	printf("---------> 1. Formatted output \"printf()\" function\n\n");
+	printf("---------> 2. Formatted output \"printf()\" function\n\n");
 
 	a = 123456789, b = 65;
 
@@ -79,7 +85,7 @@ int main()
 	*/
 
 
-	/*---------> 1. Unformatted inputs "scanf()"
+	/*---------> 3. Unformatted inputs
 	 * -> The following are used to get characters (single char) e.g. 
 	 *  getchar();
 	 *  getch() and getche()  - "conio" library and they don't wait to press enter key
@@ -87,45 +93,71 @@ int main()
 	 *
 	 *
 	 * NB:
-	 * You enter a character for e and press Enter.
+	 * You enter a character for varaiable e and press Enter.
 	 * The first scanf reads the entered character, but the newline character ('\n') 
-	 * remains in the input buffer.
-	 * The second scanf is executed for f. However, it immediately reads the 
-	 * newline character left in the buffer from the previous input and considers it as the input for f.
+	 * remains in the std input stream.
+	 * As a result, The second scanf is executed for variable f and immediately reads the 
+	 * newline character left in the stream from the previous input and considers it a value for f.
 	 * To address this issue, you can modify your code by using getchar() before the second scanf 
-	 * or add a space before the "%c" to consume the newline character:
-	 */
+	 * or add a space before the "%c" inside the following (or second) scanf to 
+	 * consume all whites spaces or newlines character (except other printable characters) 
+	 * e.g. scanf(" %c")
+	 *
 
-	//printf("Enter the value of e: ");
-	//e = getchar();
+	// ---> a. getchar() function
+	printf("Enter the value of e: ");
+	e = getchar();
 
-	//getchar();
+	printf("Enter the value of f: ");
+	f = getchar();
 
-	//printf("Enter the value of f: ");
-	//f = getchar();
-	//
-	//
 	/*	
 	printf("Enter the value of e: ");
 	e = getch();
 
 	getchar();
 
-
+	// ---> b. getche() and getch() functions
 	printf("Enter the value of e: ");
 	f = getche();
+	*
 	
-	printf("The value of e: %c, and f = %c", e, f);
+	//----------------> Quick revision
 
-	*/
+	//printf("Enter the value of e: ");
+	//scanf("%c %c", &e, &f);
 
-	printf("Enter your name please: ");
-	fgets(user, sizeof(user),stdin);
-	printf("Welcome %s", user);
+	//getchar();
+	
+	printf("Enter the value of e: ");
+	scanf("%c", &e);
+
+	//while (getchar() != '\n');      //best solution for overflows or whitespaces
+
+	e = getchar();
+
+	printf("Enter the value of f: ");
+	scanf(" %c", &f);
+
+	printf("The value of e: %c, and f = %c\n", e, f);
+
+	*
+
+	//----> c. gets(variable) (but replaced with fgets() function)
+	//fgets(variable,  No of bytes or char, pointer to file structure or data source (stdin or external file));
 
 
+	printf("The value of user: %s", user);
+	printf("\n");
 
 
+	/*----> 4. Unformatted outputs
+	 * -putchar(), putch -> They output single char 
+	 * -puts() - It outputs a (unformatted) string
+	 */
+
+	puts("Hello boss");
+	//puts('a');      //Error
 
 
 
