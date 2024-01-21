@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - Entry point
  *
@@ -94,14 +95,21 @@ int main()
 	 *
 	 * NB:
 	 * You enter a character for varaiable e and press Enter.
-	 * The first scanf reads the entered character, but the newline character ('\n') 
-	 * remains in the std input stream.
+	 * The first scanf reads the entered character, but the newline character ('\n') produce 
+	 * by pressing "return key" remains in the std input stream.
 	 * As a result, The second scanf is executed for variable f and immediately reads the 
 	 * newline character left in the stream from the previous input and considers it a value for f.
 	 * To address this issue, you can modify your code by using getchar() before the second scanf 
 	 * or add a space before the "%c" inside the following (or second) scanf to 
 	 * consume all whites spaces or newlines character (except other printable characters) 
 	 * e.g. scanf(" %c")
+	 *
+	 * The code looks simple, it reads string from standard input and prints the entered string, 
+	 * but it suffers from Buffer Overflow as gets() doesnt do any array bound testing. 
+	 * gets() keeps on reading until it sees a newline character.
+	 *
+	 * To avoid Buffer Overflow, fgets() should be used instead of gets() as fgets() makes sure 
+	 * that not more than MAX_LIMIT characters are read.
 	 *
 
 	// ---> a. getchar() function
@@ -153,13 +161,12 @@ int main()
 
 	/*----> 4. Unformatted outputs
 	 * -putchar(), putch -> They output single char 
-	 * -puts() - It outputs a (unformatted) string
+	 * -puts() - It outputs an (unformatted) string with a newline
 	 */
 
 	puts("Hello boss");
 	//puts('a');      //Error
-
-
+	//gets()          //Error
 
 
 
