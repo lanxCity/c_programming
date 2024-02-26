@@ -171,8 +171,8 @@ NB:
 * The XOR operator works in opposite way. For example,
 
 3 & 9 -> 0011 & 1001 = 0001 ~= 1 (integer)
-3 | 9 -> 0011 & 1001 = 1011 ~= 11 (integer)
-3 ^ 9 -> 0011 & 1001 = 1011 ~= 11 (integer) (if both sides are the same, then it is "0", else it is "1")
+3 | 9 -> 0011 | 1001 = 1011 ~= 11 (integer)
+3 ^ 9 -> 0011 ^ 1001 = 1010 ~= 10 (integer) (if both sides are the same, then it is "0", else it is "1")
 
 * Left shift operator shifts all bits towards left by a certain number of specified bits. The bit positions that have been vacated by the left shift operator are filled with 0. For any integer, the binary format started from 8bits upward E.g.
 
@@ -198,7 +198,7 @@ Bitwise complement Operation of 35
 
 However, in real sense, do not worry about the inversion but note that 
 
-"~value = -(value + 1)" e.g.  ~6 = -(110 + 1) == -(111) == -7.
+"~value = -(valueBits + 1)" e.g.  ~6 = -(110 + 1) == -(111) == -7.
 
 * But to get the negative of a value, 2's compliment is used (8 or more bits).
 * And the 2's compliment is especially useful to get the negative of a value (by noting that the first bit is a sign)
