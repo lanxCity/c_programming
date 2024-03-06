@@ -58,18 +58,9 @@ int main()
     printf("Hey %s %s! How are you doing?", firstName, lastName);
     */
 
-    /*-------------Testing scanf function------------*/
-    int x, y, z;
-    char name[30];
-
-    printf("Enter the value of x: ");
-    scanf("%d", &x);
-    printf("Enter the value of y: ");
-    scanf("%d", &y);
-    printf("Enter your name: ");
-    scanf("%s", name);
-
-    printf("Done!!!!!!!!!!\n");
+    /**->Functions in C programming
+     * - passing of the argument allows to change the behaviour of a function
+     */
 
     return (0);
 }
