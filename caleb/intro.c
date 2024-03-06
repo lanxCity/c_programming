@@ -43,7 +43,19 @@ int main()
 
     /*It's either we divide by "5.0" or we type cast... e.g "(double) sum / 5", which converts "sum" to double */
 
-    printf("-> %i / %i is: %f", sum, num, div);
+    printf("-> %i / %i is: %f\n\n", sum, num, div);
+
+    /*-> Strings*/
+    char lastName[31];
+    char firstName[31];
+
+    printf("Enter your fisrtname: ");
+    scanf("%s", firstName);
+
+    printf("Enter your lastname: ");
+    scanf("%s", lastName);
+
+    printf("Hey %s %s! How are you doing?", firstName, lastName);
 
     return (0);
 }
