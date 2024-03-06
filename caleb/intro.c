@@ -9,9 +9,9 @@ int main()
     /**-> Variables
      * - The declaration of a variable is called "Variable Declaration"
      * - Assignment of a value to the variable declared is called "variable initialization"
-     */
-    int x, z, sum, num; /*Declaration*/
-    x = 2;              /*initialization*/
+     *
+    int x, z, sum, num; /*Declaration*
+    x = 2;              /*initialization*
 
     int y = x * x; /*daclaration and init in a single statement*/
 
@@ -27,7 +27,7 @@ int main()
      * - address of the variable where data would be stored)
      * - "&" is called the "Address-of operator" that returns a value which is a memory address of a variable
      * - scanf returns no. of value inputs
-     */
+     *
     printf("Enter any integer to add to %i: ", y);
     scanf("%i", &z);
 
@@ -37,15 +37,15 @@ int main()
     /**->Type casting
      * - The act of converting between data types
      * Example is as follows;
-     */
+     *
     num = 7;
     float div = (double)sum / num; /*Arithmetic error (int / int = int value)*/
 
-    /*It's either we divide by "5.0" or we type cast... e.g "(double) sum / 5", which converts "sum" to double */
+    /*It's either we divide by "5.0" or we type cast... e.g "(double) sum / 5", which converts "sum" to double *
 
     printf("-> %i / %i is: %f\n\n", sum, num, div);
 
-    /*-> Strings*/
+    /*-> Strings*
     char lastName[31];
     char firstName[31];
 
@@ -56,6 +56,20 @@ int main()
     scanf("%s", lastName);
 
     printf("Hey %s %s! How are you doing?", firstName, lastName);
+    */
+
+    /*-------------Testing scanf function------------*/
+    int x, y, z;
+    char name[30];
+
+    printf("Enter the value of x: ");
+    scanf("%d", &x);
+    printf("Enter the value of y: ");
+    scanf("%d", &y);
+    printf("Enter your name: ");
+    scanf("%s", name);
+
+    printf("Done!!!!!!!!!!\n");
 
     return (0);
 }
