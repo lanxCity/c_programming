@@ -1,3 +1,0 @@
-=> Introduction to C Programming
-- "main" function is the entry point for executing c programming
-- A function name is called an "identifier"
