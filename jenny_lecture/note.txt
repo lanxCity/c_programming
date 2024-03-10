@@ -91,7 +91,7 @@ ii Floating/real constants
 -Decimal format: 3.14, 0.123, 1000.
 -Exponential form: 3.14e2 (equal to 314), 1.23e-3 (equal to 0.00123)
 
-b. Character cconstants
+b. Character constants
 i. Single character const. - These are being stored in form of ASCII charcters and they are enclosed in a single quote e.g. 's', '/n', 'B', etc.
 
 ii. String const. - This is a sequence of characters that are enclosed in double quote. A string is often ended or terminated with null char. ("\o") and considered part of the string (i.e string length increases with 1 char.).
@@ -155,7 +155,7 @@ NB:
 * For Modulo operator (%), the sign of the first operand determines the sign of the remainder. 
 * It can only be used with integers.
 
-* Associtivity (for both Arithmetic and Relational) is right to left (In a case where precedence doesn't works);
+* Associtivity (for both Arithmetic and Relational) is left to right (In a case where precedence doesn't works);
 
 * Arithmetic operators have high precedence to relationals'
 * %, *, / have same precedece but higher than "+, -"
