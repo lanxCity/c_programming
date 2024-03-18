@@ -18,7 +18,7 @@ int main(int argc, char const *argv[])
     printf("Enter the adjacent value: ");
     scanf("%lf", &adj);
 
-    hyp = sqrt((opp * opp) + (adj * adj));
+    hyp = sqrt(pow(opp, 2.0) + pow(adj, 2.0));
 
     printf("The hypotenus is: %f", hyp);
 
