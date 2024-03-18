@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 /**
  * main - Code entry point
@@ -35,12 +36,12 @@ int main()
 	 * The power <= -4 or power <= 5 are not converted to scientic notation by defaul
 	 * 
 	 * NB: if you wanna escape "%", you double it as "%%".
-	 */
+	 *
 
 	int a, b;
 
 	a = 2.542e3;
-	b = 25.7e2;  /*multiply by 10^3*/
+	b = 25.7e2;  /*multiply by 10^3*
 
 	printf("-------------> INTEGERS\n");
 	printf("=> %i : %i\n", a, a);
@@ -49,7 +50,7 @@ int main()
 	double c, d;
 	
 	c = 2.542e9;
-	d = 25.7e3;  /*multiply by 10^3*/
+	d = 25.7e3;  /*multiply by 10^3*
 
 	printf("-------------> FLOATING\n");
 	printf("=> %f (%%e): %e\n", c, c);
@@ -58,12 +59,48 @@ int main()
 	printf("=> %f (%%e): %e\n", d, d);
 	printf("=> %f (%%g): %g\n", d, d);
 	
-	/*To read sci-notation from stdin, we use "lf" and also works for decimal*/
+	/*To read sci-notation from stdin, we use "lf" and also works for decimal*
 	printf("Enter sci-notation value: ");
 	scanf("%lf", &d);
 
 	printf("=> %f (%%e): %e\n", d, d);
-	printf("=> %f (%%g): %g\n", d, d);
+	printf("=> %f (%%g): %g\n", d, d);*/
+
+	/**
+	 * - Character are data (ASCII values) with a single qoute
+	 * - Booleans are logical data type which can be either true (1 or other positive int) or false (0).
+	 *   But in under the hood, true is 1.
+	 *   To declare booean variable, we use "_Bool" data type, however, we can include a library for boolean
+	 *   using "<stdbool>" and declaration of "bool".
+	 */
+	char myData = 'A';
+	_Bool isTrue = 915;
+	bool isDone = 1;
+
+	printf("The char '%c' is printed as int \"%d\"\n", myData, myData);
+	printf("The boolean variable using \"_Bool\" is -> %d\n", isTrue);
+	printf("The boolean variable using \"bool\" is -> %d\n", isDone);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	return (0);
