@@ -22,12 +22,20 @@ int main(int argc, char const *argv[])
      * Epoch (January 1, 1970, 00:00:00 UTC)
      */
 
-    srand(time(NULL));
+    /*srand(time(NULL));
     int randNum = rand();
 
     printf("From time: %ld\n", time(NULL));
     printf("From rand: %d\n", randNum % 10);
     printf("RAND_MAX: %d\n", RAND_MAX);
+    */
+
+    /*Generate random number within the range of 0 - 6*/
+    srand(time(NULL));
+
+    int hiddenNum = (rand() % 6) + 1;
+
+    printf("Hidden number: %d", hiddenNum);
 
     return 0;
 }
