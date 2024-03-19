@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
     srand(time(NULL));
     int randNum = rand();
 
-    printf("From time: %d\n", time(NULL));
+    printf("From time: %ld\n", time(NULL));
     printf("From rand: %d\n", randNum % 10);
     printf("RAND_MAX: %d\n", RAND_MAX);
 
