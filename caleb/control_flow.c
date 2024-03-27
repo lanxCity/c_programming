@@ -25,14 +25,14 @@ int main(int argc, char const *argv[])
      * good practice
      */
 
-    int cgpa;
+    /*int cgpa;
     printf("Please, enter your age: ");
     scanf("%d", &cgpa);
 
     switch (cgpa)
     {
-    case 4 /* constant-expression */:
-        /* code */
+    case 4 /* constant-expression *:
+        /* code *
         printf("Excellent!");
         break;
     case 3:
@@ -47,9 +47,28 @@ int main(int argc, char const *argv[])
     default:
         printf("Invalid input!!!");
         break;
-    }
+    }*
 
-    /* --> Intro to loops */
+    /** --> Intro to loops
+     * for loop
+     * while loop
+     * do-while loop
+     */
+
+    bool validInput = false;
+    int userInput;
+
+    do
+    {
+        printf("Enter any number from 0 - 9: ");
+        scanf("%d", &userInput);
+
+        if (userInput >= 0 && userInput < 10)
+            validInput = true;
+
+    } while (!validInput);
+
+    printf("=> The number you entered is %d", userInput);
 
     return 0;
 }
