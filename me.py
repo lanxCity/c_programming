@@ -1,3 +1,4 @@
+'''
 roman_to_int = {
     'I': 1, 'V': 5,
     'X': 10, 'L': 50,
@@ -40,4 +41,51 @@ if input_valid:
     print(total)
 else:
     print("Invalid!!!")
-        
+
+
+
+my_num = [11, 22, 32, 84, 15]
+
+n = 4
+
+count = 0
+
+
+try:
+    for i in range(n):
+        print(my_num[i], end=", ")
+        count += 1
+except IndexError:
+    pass
+
+print()
+return 
+    
+'''
+me = []
+
+me.insert(0, 12)
+me.insert(0, 6)
+me.insert(0, 10)
+
+total = 1
+for i in range(len(me) - 1):
+    total *= me[i]
+
+print(me, total)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

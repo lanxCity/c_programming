@@ -1,0 +1,1 @@
+print(int(my_name))
